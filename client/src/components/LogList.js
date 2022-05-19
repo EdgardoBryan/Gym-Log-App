@@ -32,7 +32,8 @@ const LogList = (props) => {
   return (
     <div>
       <Link to={"/new-log"}>Click Here for New Log Page Fool!</Link>
-      <h1 className="header">Hello Logs List</h1>
+      <h1 className="header">My Fitness Logs!</h1>
+      <h3 className="header">Here You Can Click on Past Workout Logs</h3>
       {logListItems}
     </div>
   );

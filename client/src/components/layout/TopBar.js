@@ -21,17 +21,17 @@ const TopBar = ({ user }) => {
   ];
 
   return (
-    <div className="top-bar">
-      <div className="top-bar-left">
-        <ul className="menu">
-          <li className="menu-text">App</li>
-          <li>
+    <div className="top-bar nav-bar">
+      <div className="top-bar-left nav-bar" >
+        <ul className="menu nav-bar">
+          <li className="menu-text nav-bar">App</li>
+          <li className="nav-bar">
             <Link to="/">Home</Link>
           </li>
         </ul>
       </div>
-      <div className="top-bar-right">
-        <ul className="menu">{user ? authenticatedListItems : unauthenticatedListItems}</ul>
+      <div className="top-bar-right nav-bar">
+        <ul className="menu nav-bar">{user ? authenticatedListItems : unauthenticatedListItems}</ul>
       </div>
     </div>
   );
