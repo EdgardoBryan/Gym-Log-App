@@ -10,7 +10,7 @@ class Log extends Model {
       required: ["date"],
       properties: {
         date: { type: "string" },
-        weight: { type: "integer" },
+        weight: { type: "string" },
       },
     };
   }
