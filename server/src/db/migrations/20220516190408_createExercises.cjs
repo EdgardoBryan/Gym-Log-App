@@ -9,8 +9,8 @@ exports.up = async (knex) => {
     return knex.schema.createTable ("exercises",(table)=>{
         table.bigIncrements("id")
         table.string("name").notNullable()
-        table.integer("sets").notNullable()
-        table.integer('reps').notNullable()
+        table.string("sets").notNullable()
+        table.string('reps').notNullable()
         table.string("notes")
         table.bigInteger("logId").unsigned().index().notNullable().references("logs.id")
         table.bigInteger("userId").unsigned().index().notNullable().references("users.id")

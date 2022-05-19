@@ -26,7 +26,7 @@ const LogList = (props) => {
 
   
   const logListItems = logs.map((logs) => {
-    return <LogTile key={logs.id} log={logs} />;
+    return <LogTile key={logs.id} log={logs} id={logs.id} />;
   });
 
   return (
