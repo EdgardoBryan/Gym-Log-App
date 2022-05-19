@@ -4,11 +4,11 @@ class LogSeeder {
         const logsData = [
             {
                 date: "12/25",
-                weight: 180
+                weight: "180"
             },
             {
                 date: "07/05",
-                weight: 190
+                weight: "190"
             },
 
         ]

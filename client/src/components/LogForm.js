@@ -1,11 +1,16 @@
 import React, { useState } from "react";
-import LogTile from "./LogTile";
+import { Link } from "react-router-dom";
+import translateServerErrors from "../services/translateServerErrors";
+import ErrorList from "./layout/ErrorList";
+
 
 const LogForm = (props) => {
  const [newLog,setNewLog] = useState({
      date:"",
      weight:""
- })
+    })
+
+    const [errors, setErrors] = useState({})
 
  
  const handleChange = (event) => {
@@ -27,37 +32,38 @@ const handleSubmit = (event) => {
   postLogForm(newLog)
   clearForm()
 }
- const postLogForm = async (newLog) => {
+
+const postLogForm = async () => {
   try {
     const response = await fetch("/api/v1/logs", {
       method: "POST",
       headers: new Headers({
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       }),
-      body: JSON.stringify(newLog),
+      body: JSON.stringify(newLog)
     })
     if (!response.ok) {
-      if (response.status === 422) {
+      if(response.status === 422) {
         const body = await response.json()
         const newErrors = translateServerErrors(body.errors)
         return setErrors(newErrors)
       } else {
         const errorMessage = `${response.status} (${response.statusText})`
         const error = new Error(errorMessage)
-        throw error
+        throw(error)
       }
-    } else {
-      setShouldRedirect(true)
     }
-  } catch (err) {
+  } catch(err) {
     console.error(`Error in fetch: ${err.message}`)
   }
 }
+  
 
     return (
     <div>
       <form onSubmit={handleSubmit}>
-        Add New Log Here!!
+        <Link to={"/"}> Add New Log Here!!</Link>
+        <ErrorList errors={errors} />
         <label htmlFor="date" >
           date
           <input  type="text" name="date" onChange={handleChange} value={newLog.date} />
@@ -68,7 +74,6 @@ const handleSubmit = (event) => {
         </label>
         <input type="submit"/>
       </form>
-      <div>{logListItems}</div>
     </div>
   );
 };
