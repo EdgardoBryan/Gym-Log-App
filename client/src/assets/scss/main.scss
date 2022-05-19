@@ -13,8 +13,33 @@
   tab-size: 4;
 }
 
+body{
+  background-image:url("https://images.unsplash.com/photo-1580261450046-d0a30080dc9b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGd5bXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800");
+  background-size: cover
+}
+.nav-bar{
+  background-color: #f0f0f0;
+}
 .header{
+  text-align: center;
   color: white;
   text-shadow: 0 0 0 #fff, 0 0 3px #fff, 0 0 10px #fff, 0 0 42px #eaa394, 0 0 82px #eaa394,
     0 0 92px #eaa394, 0 0 102px #eaa394, 0 0 151px #eaa394;
+}
+
+.Log-Boxes{
+  padding-top: 1.5em;
+  width: 72.5em;
+  border: 3px solid #f7f4f4;
+  height: 12em;
+  margin-top: 1em;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: #353536;
+  font-family: "Koulen";
+  font-size: 1em;
+  color: #f7f4f4;
 }
