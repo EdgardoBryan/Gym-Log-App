@@ -1,4 +1,5 @@
-import { Log } from "../../../models/index.js";
+import { Log } from "./../../models/index.js";
+
 class LogSeeder {
     static async seed() {
         const logsData = [

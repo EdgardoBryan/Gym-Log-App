@@ -43,3 +43,23 @@ body{
   font-size: 1em;
   color: #f7f4f4;
 }
+.Log-Details{
+  padding-top: 1.5em;
+  width: 72.5em;
+  border: 3px solid #f7f4f4;
+  height: 12em;
+  margin-top: 1em;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: #353536;
+  font-family: "Koulen";
+  font-size: 1em;
+  color: #f7f4f4;
+}
+.exercises-show-page{
+  color:white;
+  font-size:25px
+}
