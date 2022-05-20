@@ -62,8 +62,12 @@ const LogShowPage = (props)=>{
         })
     return (
         <div>
-            <h1 className="Log-Details">Date:{log.date} Current Weight:{log.weight}</h1>
-            {exercisesTiles}
+            <h1 className="Log-Details tile-show-page">Here is the workout for 
+            <div>Date:{log.date}</div> 
+            <div>Weight for this day:</div>
+            {log.weight}lbs
+            </h1>
+            {exercisesTiles} 
         </div>
     )
 }

@@ -17,9 +17,6 @@ body{
   background-image:url("https://images.unsplash.com/photo-1580261450046-d0a30080dc9b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGd5bXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800");
   background-size: cover
 }
-.nav-bar{
-  background-color: #f0f0f0;
-}
 .header{
   text-align: center;
   color: white;
@@ -29,9 +26,9 @@ body{
 
 .Log-Boxes{
   padding-top: 1.5em;
-  width: 72.5em;
+  width: 25.5em;
   border: 3px solid #f7f4f4;
-  height: 12em;
+  height: 8em;
   margin-top: 1em;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   align-items: center;
@@ -60,7 +57,85 @@ body{
   color: #f7f4f4;
 }
 .exercises-show-page{
-  color:white;
-  font-size:15px
+  color:#cfba9a;
+  font-size:25px;
+  display: flex;
+  border: solid black;
+  background-color: gray;
+  width: 450px;
 }
 
+.link{
+  color:white;
+  border: solid black;
+  width:20em;
+  font-family: "Koulen";
+  background-color: #353536;
+}
+.nav-bar-container{
+  border: solid gray 2.5px
+}
+.link:hover{
+  color: #f7f29e
+}
+.nav{
+  background-color:#353536;
+}
+.top-bar ul{
+  background-color: #353536;
+}
+.menu-text{
+  color:gray !important;
+  font-size:40px;
+}
+
+.home{
+  color: gray;
+  font-size: 15px;
+  margin-top: 32px;
+}
+
+.home:hover{
+  color:#f7f29e
+}
+
+.sign-in{
+color:gray;
+font-size: 15px
+}
+
+.sign-in:hover{
+  color:#f7f29e;
+}
+.sign-out:hover{
+  color: #f7f29e;
+  
+}
+.sign-out{
+color:gray;
+font-size: 15px
+}
+.button{
+  background-color: #353536;
+}
+.button:hover{
+  background-color: #cfba9a;
+}
+
+hr{
+  color:#353536;
+  
+}
+
+// .new-box{
+//   display: flex;
+//   height: 20em;
+//   justify-content: center;
+//   align-items: center;
+//   margin-right: auto;
+//   border: solid black 5px;
+// }
+
+.tile-show-page{
+  width:200px;
+}
