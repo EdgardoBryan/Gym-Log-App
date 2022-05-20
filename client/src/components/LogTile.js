@@ -4,7 +4,7 @@ const LogTile = (props)=>{
     
     return (
         <div>
-         <h6 className="Log-Boxes">{props.log.date} {props.log.weight}</h6>
+         <h2 className="Log-Boxes">Date:{props.log.date} Current Weight:{props.log.weight}</h2>
         </div>
     )
 }

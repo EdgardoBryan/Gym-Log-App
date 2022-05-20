@@ -3,14 +3,13 @@ import { Link } from "react-router-dom";
 import translateServerErrors from "../services/translateServerErrors";
 import ErrorList from "./layout/ErrorList";
 
-
 const LogForm = (props) => {
  const [newLog,setNewLog] = useState({
      date:"",
      weight:""
     })
 
-    const [errors, setErrors] = useState({})
+  const [errors, setErrors] = useState({})
 
  
  const handleChange = (event) => {
