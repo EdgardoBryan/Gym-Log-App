@@ -62,7 +62,7 @@ const LogShowPage = (props)=>{
         })
     return (
         <div>
-            <h1 className="Log-Details">{log.date} {log.weight}</h1>
+            <h1 className="Log-Details">Date:{log.date} Current Weight:{log.weight}</h1>
             {exercisesTiles}
         </div>
     )
