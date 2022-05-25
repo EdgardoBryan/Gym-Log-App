@@ -26,71 +26,7 @@ class ExerciseSeeder {
                 logId: 1,
                 userId: 1
             },
-            {
-                name:"Barbell Squats",
-                sets: "3",
-                reps: "15",
-                logId: 1,
-                userId: 1
-            },
-            {
-                name:"Lunges",
-                sets: "4",
-                reps:"8",
-                logId: 1,
-                userId: 1
-            },
-            {
-                name:"Leg Press",
-                sets:"5",
-                reps:"12",
-                logId: 1,
-                userId: 1
-
-            },
-            {
-                name:"Barbell Row",
-                sets: "3",
-                reps: "15",
-                logId: 1,
-                userId: 1
-            },
-            {
-                name:"Lat PullDown",
-                sets: "4",
-                reps:"8",
-                logId: 1,
-                userId: 1
-            },
-            {
-                name:"T-Bar Row",
-                sets:"5",
-                reps:"12",
-                logId: 1,
-                userId: 1
-
-            },
-            {
-                name:"Cable Crunches",
-                sets: "3",
-                reps: "15",
-                logId: 1,
-                userId: 1
-            },
-            {
-                name:"Sit Ups",
-                sets: "4",
-                reps:"8",
-                logId: 1,
-                userId: 1
-            },
-            {
-                name:"Ab Holds",
-                sets:"5",
-                reps:"12",
-                logId: 1,
-                userId: 1
-            }
+            
         ]
 
         for(const singleExerciseData of exerciseData){
