@@ -109,12 +109,12 @@ const LogShowPage = (props) => {
   return (
     <div>
       <h1 className="Log-Details tile-show-page">
-        Here is the workout for
+          A Gainz Log!
         <div>Date:{log.date}</div>
         <div>Weight for this day:</div>
         {log.weight}lbs
       </h1>
-      {exercisesTiles}
+      <h3 className="exercise-tile-show-page">{exercisesTiles}</h3>
       <ExerciseForm postExerciseForm={postExerciseForm} errors={errors} />
     </div>
   );

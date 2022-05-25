@@ -1,6 +1,7 @@
 @import "./foundation/settings";
 @import "~foundation-sites/scss/foundation";
 @include foundation-everything;
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 // place global css here
 *,
 *::before,
@@ -18,16 +19,17 @@ body{
   background-size: cover
 }
 .header{
+  font-family: 'Koulen', cursive;
   text-align: center;
-  color: white;
-  text-shadow: 0 0 0 #fff, 0 0 3px #fff, 0 0 10px #fff, 0 0 42px #eaa394, 0 0 82px #eaa394,
-    0 0 92px #eaa394, 0 0 102px #eaa394, 0 0 151px #eaa394;
+  color: gray;
+  text-shadow: 0 0 0 #fff, 0 0 3px #fff, 0 0 10px #fff, 0 0 42px #353536, 0 0 82px #353536,
+    0 0 92px #353536, 0 0 102px #353536, 0 0 151px #353536;
 }
 
 .Log-Boxes{
   padding-top: 1.5em;
-  width: 25.5em;
-  border: 3px solid #f7f4f4;
+  width: 35.5em;
+  border: 3px solid #cfba9a;
   height: 8em;
   margin-top: 1em;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -39,11 +41,12 @@ body{
   font-family: "Koulen";
   font-size: 1em;
   color: #f7f4f4;
+  margin: auto;
 }
 .Log-Details{
   padding-top: 1.5em;
   width: 72.5em;
-  border: 3px solid #f7f4f4;
+  border: 3px solid #cfba9a;
   height: 12em;
   margin-top: 1em;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -55,14 +58,20 @@ body{
   font-family: "Koulen";
   font-size: 1em;
   color: #f7f4f4;
+  margin: auto;
 }
 .exercises-show-page{
   color:#cfba9a;
-  font-size:25px;
+  font-size:10px;
   display: flex;
   border: solid black;
   background-color: gray;
-  width: 450px;
+  width: 300px;
+  text-align: center;
+  opacity: .9; 
+}
+.exercises-show-page:hover{
+  opacity: 900;
 }
 
 .link{
@@ -76,7 +85,7 @@ body{
   border: solid gray 2.5px
 }
 .link:hover{
-  color: #f7f29e
+  color: #ceba9a
 }
 .nav{
   background-color:#353536;
@@ -96,7 +105,7 @@ body{
 }
 
 .home:hover{
-  color:#f7f29e
+  color:#ceba9a
 }
 
 .sign-in{
@@ -127,15 +136,6 @@ hr{
   
 }
 
-// .new-box{
-//   display: flex;
-//   height: 20em;
-//   justify-content: center;
-//   align-items: center;
-//   margin-right: auto;
-//   border: solid black 5px;
-// }
-
 .tile-show-page{
   width:200px;
 }
@@ -145,17 +145,127 @@ hr{
   font-size: 20px;
   display: flex;
   height: 5em;
-  width: 20em;
+  width: 40em;
   flex-direction: column;
   justify-content: center;
   background-color:#ceba9a;
   padding: 2em;
-  border: solid black 2px;
+  border: solid black 1px;
+  margin: auto;
 }
 
 .submit-exercise{
   background-color: #cc9d4d;
   color: white;
   border-radius: 5%;
-  border:solid black 2px
+  border:solid black 2px;
+  margin: auto;
+  justify-content: center;
+  display: flex;
+}
+.log-form{
+  text-align: center;
+  width: 25em;
+  color: white;
+  font-size: 20px;
+  background-color: #353536;
+  border:solid #ceba9a;
+  margin: auto;
+  padding: 2em;
+  margin-top: 10px
+}
+.weight , .date{
+  color: white;
+  font-size: 40px;
+}
+.log-form-home{
+  color: gray;
+  margin-top: 25px;
+}
+.log-form-home:hover{
+  color: #cc9d4d;
+}
+.log-redirect{
+  color: white
+}
+
+.log-redirect:hover{
+  color:#ceba9a
+}
+.welcome{
+  text-align: center;
+  margin: auto;
+  font-size: 40px;
+  padding-bottom:50px;
+  margin-top: 20px;
+  border: solid #ceba9a 5px;
+}
+
+.main-header{
+  padding-top: 40px;
+  color: #ceba9a;
+}
+.delete-button{
+  height: 10em;
+  padding-bottom: 10px;
+  width: 10em;
+}
+.delete-button:hover{
+  color:red;
+  background-color: black;
+}
+.workouts-tile{
+  margin: auto;
+  text-align: center;
+  font-size: 16px;
+}
+
+.exercises-show-page{
+  text-align: center;
+  margin: auto;
+  width: 80em;
+  margin-bottom: 3px;
+}
+h1.Log-Details.tile-show-page{
+  width: 50em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: gray;
+  color:#ceba9a
+}
+a{
+  color:#808080;
+}
+
+a:hover{
+color: #ceba9a;
+}
+.register{
+  text-align: center;
+  width: 25em;
+  color: white;
+  font-size: 20px;
+  background-color: #353536;
+  border:solid #ceba9a;
+  margin: auto;
+  padding: 2em;
+  margin-top: 10px
+}
+.sign-in-page{
+  text-align: center;
+  width: 25em;
+  color: white;
+  font-size: 20px;
+  background-color: #353536;
+  border:solid #ceba9a;
+  margin: auto;
+  padding: 2em;
+  margin-top: 10px
+}
+.form-words{
+  color:white;
+}
+
+h2.Log-Boxes{
+  margin-bottom: 7px;
 }

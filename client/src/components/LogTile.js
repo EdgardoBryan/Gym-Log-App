@@ -7,7 +7,7 @@ const LogTile = (props) => {
       <h2 className="Log-Boxes">
         <div>Log of the Day</div>
         Date:{props.log.date} Current Weight:{props.log.weight}
-        <div><Link to={`/logs/${props.log.id}`}>Click here for details</Link></div>
+        <div><Link to={`/logs/${props.log.id}`}  className="log-redirect">Click here for details</Link></div>
       </h2>
     </div>
   );
