@@ -139,3 +139,23 @@ hr{
 .tile-show-page{
   width:200px;
 }
+
+.exercise-form{
+  color:#808080;
+  font-size: 20px;
+  display: flex;
+  height: 5em;
+  width: 20em;
+  flex-direction: column;
+  justify-content: center;
+  background-color:#ceba9a;
+  padding: 2em;
+  border: solid black 2px;
+}
+
+.submit-exercise{
+  background-color: #cc9d4d;
+  color: white;
+  border-radius: 5%;
+  border:solid black 2px
+}

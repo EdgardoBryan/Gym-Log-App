@@ -4,28 +4,28 @@ class Exercise extends Model {
   static get tableName() {
     return "exercises";
   }
-  // static get relationMappings() {
-  //   const { Log, User } = require("./index.js");
+   static get relationMappings() {
+     const { Log, User } = require("./index.js");
 
-  //   return {
-  //     log: {
-  //       relation: Model.BelongsToOneRelation,
-  //       modelClass: Log,
-  //       join: {
-  //         from: "exercises.logId",
-  //         to: "logs.id",
-  //       },
-  //     },
-  //     user: {
-  //       relation: Model.BelongsToOneRelation,
-  //       modelClass: User,
-  //       join: {
-  //         from: "exercises.userId",
-  //         to: "users.id",
-  //       },
-  //     },
-  //   };
-  // }
+     return {
+       log: {
+         relation: Model.BelongsToOneRelation,
+         modelClass: Log,
+         join: {
+           from: "exercises.logId",
+           to: "logs.id",
+         },
+       },
+       user: {
+         relation: Model.BelongsToOneRelation,
+         modelClass: User,
+         join: {
+           from: "exercises.userId",
+           to: "users.id",
+         },
+       },
+     };
+  }
 
   static get jsonSchema() {
     return {

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import translateServerErrors from "../services/translateServerErrors";
 import ErrorList from "./layout/ErrorList";
+import { Redirect } from "react-router-dom";
 
 const LogForm = (props) => {
  const [newLog,setNewLog] = useState({
@@ -10,7 +11,7 @@ const LogForm = (props) => {
     })
 
   const [errors, setErrors] = useState({})
-
+  const [shouldRedirect, setShouldRedirect] = useState(false)
  
  const handleChange = (event) => {
   setNewLog({
@@ -51,17 +52,21 @@ const postLogForm = async () => {
         const error = new Error(errorMessage)
         throw(error)
       }
+    }else{
+      setShouldRedirect(true)
     }
   } catch(err) {
     console.error(`Error in fetch: ${err.message}`)
   }
 }
-  
+if (shouldRedirect) {
+  return <Redirect push to="/logs" />
+}
 
     return (
     <div>
       <form onSubmit={handleSubmit}>
-        <Link to={"/"}> Add New Log Here!!</Link>
+        <Link to={"/logs"}> Back to Home Page</Link>
         <ErrorList errors={errors} />
         <label htmlFor="date" >
           date

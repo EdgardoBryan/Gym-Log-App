@@ -34,23 +34,23 @@ const ExerciseForm = (props) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">
+        <label htmlFor="name" className="exercise-form">
           Exercise Name:
           <input name="name" type="text" onChange={handleChange} value={newExercise.name} />
         </label>
-        <label htmlFor="sets">
+        <label htmlFor="sets" className="exercise-form">
           Sets:
           <input name="sets" type="text" onChange={handleChange} value={newExercise.sets} />
         </label>
-        <label htmlFor="reps">
+        <label htmlFor="reps" className="exercise-form">
           Reps:
           <input name="reps" type="text" onChange={handleChange} value={newExercise.reps} />
         </label>
-        <label htmlFor="notes">
+        <label htmlFor="notes" className="exercise-form">
           Notes:
           <input name="notes" type="text" onChange={handleChange} value={newExercise.notes} />
         </label>
-        <input type="submit" />
+        <input type="submit" value="NEW EXERCISE" className="submit-exercise" />
       </form>
     </div>
   );

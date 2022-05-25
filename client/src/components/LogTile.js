@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const LogTile = (props) => {
   return (
@@ -6,7 +7,7 @@ const LogTile = (props) => {
       <h2 className="Log-Boxes">
         <div>Log of the Day</div>
         Date:{props.log.date} Current Weight:{props.log.weight}
-        <div>Click here for details</div>
+        <div><Link to={`/logs/${props.log.id}`}>Click here for details</Link></div>
       </h2>
     </div>
   );
