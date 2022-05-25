@@ -2,12 +2,26 @@ import Express from "express";
 import Log from "../../../models/Log.js";
 import { ValidationError } from "objection";
 import cleanUserInput from "../../../services/cleanUserInput.js";
-import LogSerializer from "../../../serializers/LogSerializer.js";
+import logExerciseRouter from "./logExerciseRouter.js";
+import Exercise from "../../../models/Exercise.js";
+import User from "../../../models/User.js";
 
 const logsRouter = new Express.Router();
 
 logsRouter.get("/", async (req, res) => {
   try {
+    // const logs = await Log.query().where({ userId: req.user.id });
+    // ^^
+    // const user = await User.query().findById(req.user.id)
+    // const logs = await user.$relatedQuery("logs")
+    
+    // first rollback / drop DB
+    // then add the `userId` column to Logs table
+
+    // look into the authenticated routes in React
+    // handle to ensure a user is logged in
+    // and on a log index/show page make sure the 
+
     const logs = await Log.query();
     res.status(200).json({ logs: logs });
   } catch (error) {
@@ -33,12 +47,18 @@ logsRouter.get("/:id", async (req, res) => {
   const id = req.params.id
   try {
     const log = await Log.query().findById(id)
+    log.exercises = await log.$relatedQuery("exercises")
+    console.log(log)
+    // log.exercises = await Exercise.query().where({logId: id})
+    
     res.status(200).json({ log: log })
   } catch (error) {
+    console.log(error)
     res.status(500).json({ error })
   }
 })
 
+logsRouter.use("/:logId/exercises", logExerciseRouter)
+
 export default logsRouter
 
-//const serializedLaunchers = launchers.map(launcher => LauncherSerializer.getSummary(launcher))

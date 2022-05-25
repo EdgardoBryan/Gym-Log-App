@@ -7,17 +7,19 @@ class Log extends Model {
 
   static get relationMappings(){
     const { Exercise } = require("./index.js")
+
     return {
       exercises:{
         relation: Model.HasManyRelation,
-        modelClass:Exercise,
-        join:{
+        modelClass: Exercise,
+        join: {
           from:"logs.id",
-          to:"exercise.logId"
+          to:"exercises.logId"
         }
       }
     }
   }
+  
   static get jsonSchema() {
     return {
       type: "object",
@@ -30,4 +32,4 @@ class Log extends Model {
   }
 }
 
-    module.exports = Log
+module.exports = Log
