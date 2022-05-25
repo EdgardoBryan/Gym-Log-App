@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 import ExerciseForm from "./ExerciseForm";
 import ExerciseTile from "./ExerciseTile";
 
+
 const LogShowPage = (props) => {
   const [log, setLog] = useState({
     date: "",
     weight: "",
     exercises: [],
   });
+  
 
   const fetchLog = async () => {
     try {
@@ -60,14 +62,46 @@ const LogShowPage = (props) => {
     }
   };
 
+
+
+  const deleteExercise = async (exerciseId) => {
+    try {
+      const response = await fetch(`/api/v1/exercises/${exerciseId}`, {
+        method: "delete",
+        headers: new Headers({
+          "Content-Type": "application/json",
+        }),
+      })
+      if (!response.ok) {
+        const errorMessage = `${response.status} (${response.statusText})`
+        const error = new Error(errorMessage)
+        throw error
+      }
+      const respBody = await response.json()
+      const filteredExercises = log.exercises.filter((exercise) => exercise.id !== exerciseId)
+      setErrors([])
+      setLog({ ...log, exercises: filteredExercises })
+    } catch (error) {
+      console.log(`Error in fetch: ${error.message}`)
+    }
+  }
+
+
   const exercisesTiles = log.exercises.map((exercises) => {
+    let matchedUser = false
+    if (props.user && props.user.id === review.userId) {
+      matchedUser = true
+    }
     return (
       <ExerciseTile
         key={exercises.id}
+        {...exercises}
         name={exercises.name}
         sets={exercises.sets}
         reps={exercises.reps}
         notes={exercises.notes}
+        deleteExercise={deleteExercise}
+        matchedUser={matchedUser}
       />
     );
   });

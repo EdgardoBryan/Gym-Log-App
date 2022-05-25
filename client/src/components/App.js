@@ -10,6 +10,7 @@ import TopBar from "./layout/TopBar";
 import LogList from "./LogList";
 import LogForm from "./LogForm"
 import LogShowPage from "./LogShowPage";
+import WelcomePage from "./WelcomePage";
 
 const App = (props) => {
   const [currentUser, setCurrentUser] = useState(undefined);
@@ -30,7 +31,8 @@ const App = (props) => {
     <Router>
       <TopBar user={currentUser} />
       <Switch>
-        <Route exact path="/" component={LogList}/>
+        <Route exact path="/" component={WelcomePage}/>
+        <Route exact path="/logs" component={LogList}/>
           <Route exact path="/new-log" component={LogForm}/>
           <Route exact path="/logs/:id" component={LogShowPage}/>
         <Route exact path="/users/new" component={RegistrationForm} />

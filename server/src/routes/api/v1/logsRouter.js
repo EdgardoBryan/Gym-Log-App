@@ -18,6 +18,7 @@ logsRouter.get("/", async (req, res) => {
     // first rollback / drop DB
     // then add the `userId` column to Logs table
 
+
     // look into the authenticated routes in React
     // handle to ensure a user is logged in
     // and on a log index/show page make sure the 
