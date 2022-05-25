@@ -65,15 +65,16 @@ if (shouldRedirect) {
 
     return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <Link to={"/logs"}> Back to Home Page</Link>
+      <form onSubmit={handleSubmit} className="log-form">
+      <Link to={"/logs"} className="log-form-home"> CLICK FOR LIST OF LOGS</Link>
+        <h5>New Daily Log</h5> 
         <ErrorList errors={errors} />
-        <label htmlFor="date" >
-          date
+        <label htmlFor="date" className="date" >
+          Add Date Here
           <input  type="text" name="date" onChange={handleChange} value={newLog.date} />
         </label>
-        <label htmlFor="weight">
-          weight
+        <label htmlFor="weight" className="weight">
+          Add Weight in Pounds
           <input  type="text" name="weight"  onChange={handleChange} value={newLog.weight}/>
         </label>
         <input type="submit"/>

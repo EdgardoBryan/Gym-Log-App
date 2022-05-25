@@ -66,18 +66,18 @@ const SignInForm = () => {
   }
 
   return (
-    <div className="grid-container" onSubmit={onSubmit}>
+    <div className="grid-container sign-in-page" onSubmit={onSubmit}>
       <h1>Sign In</h1>
       <form>
         <div>
-          <label>
+          <label className="form-words">
             Email
             <input type="text" name="email" value={userPayload.email} onChange={onInputChange} />
             <FormError error={errors.email} />
           </label>
         </div>
         <div>
-          <label>
+          <label className="form-words">
             Password
             <input
               type="password"

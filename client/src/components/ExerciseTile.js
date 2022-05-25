@@ -7,19 +7,19 @@ const ExerciseTile = (props)=>{
     let matchedFeatures = []
   if (props.matchedUser) {
     matchedFeatures = [
-      <button type="button" className="button sign-button delete-button" onClick={handleDelete}>
+      <button type="button" className="delete-button" onClick={handleDelete}>
         Delete
       </button>
     ]
   }
     return(
         <div className="exercises-show-page">
-                <p>Exercise: {props.name} </p>
-                <p>Number of Sets:{props.sets}</p>
-                <p>Number of Reps: {props.reps}</p>
-                <p>Notes: {props.notes}</p>
+                <div className="workouts-tile">Exercise: {props.name} </div>
+                <div className="workouts-tile">Number of Sets:{props.sets}</div>
+                <div className="workouts-tile">Number of Reps: {props.reps}</div>
+                <div className="workouts-tile">Notes: {props.notes}</div>
                 <button type="button"
-                 className="button sign-button delete-button"
+                 className=" delete-button"
                  onClick={handleDelete}> 
                  Delete
                   </button>
