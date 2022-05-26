@@ -11,6 +11,7 @@ import LogList from "./LogList";
 import LogForm from "./LogForm"
 import LogShowPage from "./LogShowPage";
 import WelcomePage from "./WelcomePage";
+import Quotes from "./Quotes";
 
 const App = (props) => {
   const [currentUser, setCurrentUser] = useState(undefined);
@@ -37,6 +38,7 @@ const App = (props) => {
           <Route exact path="/logs/:id" component={LogShowPage}/>
         <Route exact path="/users/new" component={RegistrationForm} />
         <Route exact path="/user-sessions/new" component={SignInForm} />
+        <Route exact path="/quotes" component={Quotes}/>
       </Switch>
     </Router>
   );
